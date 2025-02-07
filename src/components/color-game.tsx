@@ -1,9 +1,7 @@
 "use client"
 import React, { useState, useCallback, useEffect } from 'react';
 
-interface ColorGameProps {}
-
-const ColorGame: React.FC<ColorGameProps> = () => {
+const ColorGame = () => {
   // State variables using useState hook
   // useState returns an array with current value and setter function
   const [targetColor, setTargetColor] = useState('');        // Color user needs to guess
