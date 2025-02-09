@@ -2,4 +2,4 @@
 
 ## Color Game
 
-An interactive game to test your eyes skills in identifyong colors
+An interactive game to test your eyes skills in identifying colors
