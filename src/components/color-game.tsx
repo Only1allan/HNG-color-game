@@ -97,7 +97,7 @@ const ColorGame = () => {
         Color Guessing Game
       </h1>
       
-      <p className="text-lg mb-6 text-gray-700 text-center">
+      <p className="text-lg mb-6 text-gray-700 text-center" data-testid="gameInstructions">
         Can you guess which color matches the box below?
       </p>
 
@@ -105,6 +105,7 @@ const ColorGame = () => {
       <div
         style={{ backgroundColor: targetColor }}
         className="w-48 h-48 rounded-lg shadow-lg mb-8 transition-all duration-300"
+        data-testid="colorBox"
       />
 
       {/* Grid of color options */}
@@ -116,19 +117,20 @@ const ColorGame = () => {
             style={{ backgroundColor: color }}
             className="w-24 h-24 rounded-lg shadow hover:shadow-xl transition-shadow duration-300 disabled:opacity-50"
             disabled={isAnimating}
+            data-testid="colorOption"
           />
         ))}
       </div>
 
       {/* Game status message */}
-      <p className={`text-xl font-semibold mb-4 ${textColor} transition-opacity duration-300 ${
+      <p className={`text-xl font-semibold mb-4  ${textColor} transition-opacity duration-300 ${
         isAnimating ? 'opacity-100' : 'opacity-0'
-      }`}>
+      }`} data-tesid="gameStatus">
         {gameStatus}
       </p>
 
       {/* Score display */}
-      <p className={`text-2xl font-bold mb-6 ${textColor}`}>
+      <p className={`text-2xl font-bold mb-6 ${textColor}` } data-testid="score">
         Score: {score}
       </p>
 
@@ -136,6 +138,7 @@ const ColorGame = () => {
       <button
         onClick={startNewGame}
         className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition-colors duration-300"
+        data-testid="newGameButton"
       >
         New Game
       </button>
